@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -11,13 +12,13 @@ body{
 }
 
 .main {
-    width: 40%;
-    min-height: 500px;
+    max-width: 40vw;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 2px solid black;
-    padding: 20px;
+    /* padding: 20px; */
     margin-top: 20px;
 }
 
@@ -36,6 +37,11 @@ li {
     cursor: pointer;
     border: 2px solid black;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 ul {
@@ -65,8 +71,65 @@ p {
     margin-top: 20px;
 }
 
-/* .credit{
+.recipes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.credit{
+    margin-top: 20px;
     width: 100%;
     color: white;
     background-color: black;
+    /* margin: 0px 0px -20px -20px; */
+    padding: 10px;
+}
+
+.credit a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 1200px) {
+    .main {
+        max-width: 95vw;
+        min-height: 80vh;
+       
+    }
+
+    ul{
+        margin: 10vh 0px;
+    }
+
+    li {
+        width: 100%;
+    }
+    
+    .recipes {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    p,li {
+        font-size: 3.5vw;
+    }
+}
+
+/* @media screen and (max-width: 600px) {
+    .main {
+        max-width: 100vw;
+        padding: 10px;
+        min-height: 80vh;
+    }
 } */
